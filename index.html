@@ -16,6 +16,7 @@
           <li class="header-nav__item">
             <a href="" class="header-nav__link">GitHub</a>
           </li>
+
           <li class="header-nav__item">
             <a href="" class="header-nav__link">Algo mas</a>
           </li>
@@ -23,27 +24,39 @@
       </nav>
     </header>
     <main class="main">
-      <section class="main-select">
-        <button class="main-select__button" id="button-titans"></button>
-        <button class="main-select__button" id="button-characters"></button>
+      <section class="button-container">
+        <button class="button" id="button-titans"></button>
+
+        <button class="button" id="button-characters"></button>
       </section>
 
-      <section class="main-data">
-        <article class="main-data__titan">
-          <div class="main-data__image-container">
-            <img src="" alt="" class="main-data__image" />
-          </div>
-        </article>
-
-        <article class="main-data__titan">
-          <div class="main-data__image-container">
-            <img src="" alt="" class="main-data__image" />
-          </div>
-        </article>
-      </section>
+      <section class="titans-container"></section>
+      <section class="characters-container"></section>
     </main>
 
-    <template class="template"></template>
+    <template class="template">
+      <article class="titans-element">
+        <div class="titans__image-container">
+          <img src="" alt="" class="titans__image" />
+        </div>
+
+        <div class="titans-data">
+          <h2 class="titans-name"></h2>
+          <p class="titans-description"></p>
+        </div>
+      </article>
+
+      <article class="character-element">
+        <div class="character__image-container">
+          <img src="" alt="" class="character__image" />
+        </div>
+
+        <div class="character-data">
+          <h2 class="character-name"></h2>
+          <p class="character-description"></p>
+        </div>
+      </article>
+    </template>
   </body>
   <script src="/js/app.js"></script>
 </html>
