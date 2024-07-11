@@ -43,13 +43,13 @@
 }
 
 .main {
-  .main-select {
+  .button-container {
     display: flex;
     gap: 10px;
     max-width: max-content;
     margin: 20px auto 0;
 
-    .main-select__button {
+    .button {
       all: unset;
       font-size: 1.4rem;
       padding: 10px 20px;
@@ -57,18 +57,10 @@
   }
 
   .main-data {
-    max-width: 1400px;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    .main-data__titan {
-      background-color: #787885;
-      height: 100%;
-      width: 240px;
-      height: 200px;
-      transition: 1s;
-
-      // lograr animacion de que crezca de un solo lado
-    }
+    flex-direction: column;
+    gap: 10px;
   }
 }
