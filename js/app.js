@@ -1,3 +1,15 @@
+const addTextButtonCharacters = (titleCharacters) => {
+  const buttonCharacters = document.getElementById('button-characters');
+
+  buttonCharacters.textContent = titleCharacters;
+};
+
+const addTextButtonTitans = (titleTitans) => {
+  const buttonTitans = document.getElementById('button-titans');
+
+  buttonTitans.textContent = titleTitans;
+};
+
 const getTitansApi = async (titansApi) => {
   try {
     const response = await fetch(titansApi);
@@ -7,6 +19,8 @@ const getTitansApi = async (titansApi) => {
       title: result.title,
       titans: result.data,
     };
+
+    addTextButtonTitans(dataTitans.title);
   } catch (error) {
     console.log(error);
   }
@@ -21,6 +35,8 @@ const getCharactersApi = async (charactersApi) => {
       title: result.title,
       characters: result.data,
     };
+
+    addTextButtonCharacters(dataCharacters.title);
   } catch (error) {
     console.log(error);
   }
