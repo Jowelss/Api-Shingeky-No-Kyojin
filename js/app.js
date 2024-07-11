@@ -1,3 +1,13 @@
+const domElements = {
+  template: document.querySelector('.template'),
+
+  titansContainer: document.querySelector('.titans-container'),
+
+  charactersContainer: document.querySelector('.characters-container'),
+
+  fragment: document.createDocumentFragment(),
+};
+
 const addTextButtonCharacters = (titleCharacters) => {
   const buttonCharacters = document.getElementById('button-characters');
 
