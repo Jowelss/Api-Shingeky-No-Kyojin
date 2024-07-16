@@ -1,16 +1,28 @@
-const getData = () => {
-  fetch('https://snk-player-api.vercel.app/')
-    .then((response) => response.json())
+const getData = async () => {
+  try {
+    const response = await fetch('https://snk-player-api.vercel.app/');
 
-    .then((result) => {
-      const data = {
-        apiTitan: result.data.titans,
-        apiCharacter: result.data.characters,
-      };
+    const result = await response.json();
 
-      return data;
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+    const data = {
+      characters: result.data.characters,
+      titans: result.data.titans,
+    };
+
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 };
+
+const getApi = async () => {
+  try {
+    const data = await getData();
+
+    const { characters, titans } = data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+getApi();
