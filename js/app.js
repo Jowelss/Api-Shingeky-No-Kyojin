@@ -4,10 +4,7 @@ const getData = async () => {
 
     const result = await response.json();
 
-    const data = {
-      characters: result.data.characters,
-      titans: result.data.titans,
-    };
+    const { data } = result;
 
     return data;
   } catch (error) {
@@ -15,14 +12,36 @@ const getData = async () => {
   }
 };
 
-const getApi = async () => {
+const getApis = async () => {
   try {
-    const data = await getData();
+    const functPromise = await getData();
 
-    const { characters, titans } = data;
+    const { characters, titans } = await functPromise;
+
+    async function getCharact() {
+      const resCharact = await fetch(characters);
+      const dataCharact = await resCharact.json();
+
+      const { data } = dataCharact;
+      console.log(data);
+      return data;
+    }
+
+    await getCharact();
+
+    async function getTitan() {
+      const resTitan = await fetch(titans);
+      const dataTitan = await resTitan.json();
+
+      const { data } = dataTitan;
+      console.log(data);
+      return data;
+    }
+
+    await getTitan();
   } catch (error) {
     console.log(error);
   }
 };
 
-getApi();
+getApis();
