@@ -25,17 +25,32 @@
     </header>
     <main class="main">
       <section class="button-container">
-        <button class="button" id="button-titans"></button>
+        <button class="button" id="button-titans">Titans</button>
 
-        <button class="button" id="button-characters"></button>
+        <button class="button" id="button-characters">Characters</button>
       </section>
       <section class="data-container">
-        <section class="titans-container"></section>
+        <section class="titan-container"></section>
         <section class="characters-container"></section>
       </section>
 
-      <template id="template-character">
-        <span class="name"></span>
+      <template id="template-titan">
+        <div class="titan-image__container">
+          <img src="" alt="" class="titan-image" />
+        </div>
+
+        <div class="titan-data__container">
+          <div class="titan-data__head">
+            <h1 class="titan-data__name"></h1>
+            <h2 class="titan-data__height"></h2>
+          </div>
+          <div class="titan-data__main">
+            <p class="titan-data__description"></p>
+          </div>
+          <div class="titan-data__footer">
+            <a href="" class="titan-data__video"></a>
+          </div>
+        </div>
       </template>
     </main>
   </body>
