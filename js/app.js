@@ -1,7 +1,7 @@
-const titansContainer = document.querySelector('.titans-container');
+const titansContainer = document.querySelector('.titan-container');
 const charactContainer = document.querySelector('.character-container');
-const templateTitans = document.getElementById('template-titans');
-const templateCharact = document.getElementById('template-characters');
+const templateTitan = document.getElementById('template-titan');
+
 const fragment = document.createDocumentFragment();
 
 const getData = async () => {
@@ -40,14 +40,32 @@ const getCharact = async (urlCharact) => {
 
     const { data } = await dataCharact;
 
-    addTitanDom(data);
+    addCharactDom(data);
   } catch (error) {
     console.log(error);
   }
 };
 
 const addTitanDom = (arrTitan) => {
-  console.log(arrTitan);
+  for (const dataTitan of arrTitan) {
+    const cloneTemplate = templateTitan.content.cloneNode(true);
+
+    const listLabels = {
+      name: cloneTemplate.querySelector('.titan-data__name'),
+      description: cloneTemplate.querySelector('.titan-data__description'),
+      height: cloneTemplate.querySelector('.titan-data__height'),
+    };
+
+    listLabels.name.textContent = dataTitan.name;
+
+    listLabels.description.textContent = dataTitan.description;
+
+    listLabels.height.textContent = dataTitan.height;
+
+    fragment.appendChild(cloneTemplate);
+  }
+
+  titansContainer.appendChild(fragment);
 };
 
 const getTitan = async (urlTitan) => {
@@ -58,7 +76,7 @@ const getTitan = async (urlTitan) => {
 
     const { data } = await dataTitan;
 
-    addCharactDom(data);
+    addTitanDom(data);
   } catch (error) {
     console.log(error);
   }
