@@ -54,6 +54,7 @@ const addTitanDom = (arrTitan) => {
       name: cloneTemplate.querySelector('.titan-data__name'),
       description: cloneTemplate.querySelector('.titan-data__description'),
       height: cloneTemplate.querySelector('.titan-data__height'),
+      image: cloneTemplate.querySelector('.titan-image'),
     };
 
     listLabels.name.textContent = dataTitan.name;
@@ -61,6 +62,8 @@ const addTitanDom = (arrTitan) => {
     listLabels.description.textContent = dataTitan.description;
 
     listLabels.height.textContent = dataTitan.height;
+
+    listLabels.image.src = dataTitan.image;
 
     fragment.appendChild(cloneTemplate);
   }
