@@ -65,13 +65,17 @@
   flex-direction: column;
   gap: 20px;
 }
-.main .data-container .titan-container .titan-image__container {
+.main .data-container .titan-container .titan-content {
+  height: 100%;
+  display: flex;
+}
+.main .data-container .titan-container .titan-content .titan-image__container {
   height: 100%;
 }
-.main .data-container .titan-container .titan-image__container .titan-image {
+.main .data-container .titan-container .titan-content .titan-image__container .titan-image {
   height: 100%;
 }
-.main .data-container .titan-data__container {
+.main .data-container .titan-container .titan-content .titan-data__container {
   height: 100%;
   display: flex;
   flex-direction: column;

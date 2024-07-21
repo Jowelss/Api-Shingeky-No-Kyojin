@@ -70,20 +70,24 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      .titan-image__container {
+      .titan-content {
         height: 100%;
-        .titan-image {
+        display: flex;
+        .titan-image__container {
           height: 100%;
+          .titan-image {
+            height: 100%;
+          }
+        }
+
+        .titan-data__container {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 5px;
         }
       }
-    }
-
-    .titan-data__container {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 5px;
     }
   }
 }
