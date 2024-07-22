@@ -51,9 +51,9 @@ const addTitanDom = (arrTitan) => {
     const cloneTemplate = templateTitan.content.cloneNode(true);
 
     const listLabels = {
-      name: cloneTemplate.querySelector('.titan-data__name'),
-      description: cloneTemplate.querySelector('.titan-data__description'),
-      height: cloneTemplate.querySelector('.titan-data__height'),
+      name: cloneTemplate.querySelector('.titan-name'),
+      description: cloneTemplate.querySelector('.titan-description'),
+      height: cloneTemplate.querySelector('.titan-height'),
       image: cloneTemplate.querySelector('.titan-image'),
     };
 
