@@ -1,6 +1,10 @@
 const titansContainer = document.querySelector('.titan-container');
 const charactContainer = document.querySelector('.character-container');
 const templateTitan = document.getElementById('template-titan');
+const templateCharacter = document.getElementById('template-character');
+
+const buttonTitan = document.getElementById('button-titan');
+const buttonCharacter = document.getElementById('button-character');
 
 const fragment = document.createDocumentFragment();
 
@@ -46,6 +50,44 @@ const getCharact = async (urlCharact) => {
   }
 };
 
+const addCharactDom = (arrCharact) => {
+  for (const dataCharact of arrCharact) {
+    const cloneTemplate = templateCharacter.content.cloneNode(true);
+
+    const listLabels = {
+      name: cloneTemplate.querySelector('.character-name'),
+      description: cloneTemplate.querySelector('.character-description'),
+      status: cloneTemplate.querySelector('.character-status'),
+      image: cloneTemplate.querySelector('.character-image'),
+    };
+
+    listLabels.name.textContent = dataCharact.name;
+
+    listLabels.description.textContent = dataCharact.description;
+
+    listLabels.status.textContent = dataCharact.status;
+
+    listLabels.image.src = dataCharact.image;
+
+    fragment.appendChild(cloneTemplate);
+  }
+  charactContainer.appendChild(fragment);
+};
+
+const getTitan = async (urlTitan) => {
+  try {
+    const resTitan = await fetch(urlTitan);
+
+    const dataTitan = await resTitan.json();
+
+    const { data } = await dataTitan;
+
+    addTitanDom(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const addTitanDom = (arrTitan) => {
   for (const dataTitan of arrTitan) {
     const cloneTemplate = templateTitan.content.cloneNode(true);
@@ -69,22 +111,4 @@ const addTitanDom = (arrTitan) => {
   }
 
   titansContainer.appendChild(fragment);
-};
-
-const getTitan = async (urlTitan) => {
-  try {
-    const resTitan = await fetch(urlTitan);
-
-    const dataTitan = await resTitan.json();
-
-    const { data } = await dataTitan;
-
-    addTitanDom(data);
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-const addCharactDom = (arrTitan) => {
-  console.log(arrTitan);
 };
