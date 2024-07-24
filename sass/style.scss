@@ -58,6 +58,10 @@
       padding: 10px 20px;
       cursor: pointer;
     }
+
+    #button-titan {
+      background-color: #2b2bac;
+    }
   }
 
   .titan-container {
@@ -85,6 +89,36 @@
       }
 
       .titan-info {
+        width: 880px;
+      }
+    }
+  }
+
+  .character-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 1200px;
+    margin: 0 auto;
+
+    .character-data {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 200px;
+
+      .character-image__container {
+        width: 300px;
+        height: 100%;
+
+        .character-image {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .character-info {
         width: 880px;
       }
     }
