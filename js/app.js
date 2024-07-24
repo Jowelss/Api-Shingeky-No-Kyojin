@@ -44,7 +44,11 @@ const getCharact = async (urlCharact) => {
 
     const { data } = await dataCharact;
 
-    addCharactDom(data);
+    const filterData = data.filter((item) => {
+      return item._id !== '669c5be1bd41930150c843e9';
+    });
+
+    addCharactDom(filterData);
   } catch (error) {
     console.log(error);
   }
@@ -109,6 +113,5 @@ const addTitanDom = (arrTitan) => {
 
     fragment.appendChild(cloneTemplate);
   }
-
   titansContainer.appendChild(fragment);
 };
