@@ -43,7 +43,6 @@
 }
 
 .main {
-  max-width: 1400px;
   margin: 0 auto;
 
   .button-container {
@@ -57,9 +56,14 @@
       font-size: 1.4rem;
       padding: 10px 20px;
       cursor: pointer;
+      transition: 0.3s;
     }
 
-    #button-titan {
+    .selectTitan {
+      background-color: #2b2bac;
+    }
+
+    .selectCharact {
       background-color: #2b2bac;
     }
   }
@@ -95,6 +99,7 @@
   }
 
   .character-container {
+    display: inline;
     display: flex;
     flex-direction: column;
     gap: 40px;
