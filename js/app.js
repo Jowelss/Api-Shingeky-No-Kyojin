@@ -115,3 +115,25 @@ const addTitanDom = (arrTitan) => {
   }
   titansContainer.appendChild(fragment);
 };
+
+buttonTitan.addEventListener('click', (e) => {
+  let className = e.target.classList.contains('selectTitan');
+
+  if (className) {
+    console.log('Elemento ya seleccionado');
+  } else {
+    e.target.classList.add('selectTitan');
+    buttonCharacter.classList.remove('selectCharact');
+  }
+});
+
+buttonCharacter.addEventListener('click', (e) => {
+  let className = e.target.classList.contains('selectCharact');
+
+  if (className) {
+    console.log('Element ya seleccionado');
+  } else {
+    buttonTitan.classList.remove('selectTitan');
+    e.target.classList.add('selectCharact');
+  }
+});
