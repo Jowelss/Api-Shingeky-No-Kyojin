@@ -9,8 +9,13 @@
   --textColor: #fff;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .header {
   max-width: 1400px;
+  margin: 0 auto;
   padding: 10px 20px;
   display: flex;
   align-items: center;
@@ -26,6 +31,7 @@
 
   .header-nav__container {
     width: 300px;
+
     .header-nav__list {
       display: flex;
       justify-content: space-around;
@@ -43,6 +49,7 @@
 }
 
 .main {
+  max-width: 1400px;
   margin: 0 auto;
 
   .button-container {
@@ -67,64 +74,67 @@
       background-color: #2b2bac;
     }
   }
-
-  .titan-container {
+  .coso {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    gap: 40px;
-    width: 1200px;
-    margin: 0 auto;
 
-    .titan-data {
+    .titan-container {
       display: flex;
-      justify-content: space-between;
-      width: 100%;
-      height: 200px;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
 
-      .titan-image__container {
-        width: 300px;
-        height: 100%;
+      .titan-data {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 200px;
 
-        .titan-image {
-          width: 100%;
+        .titan-image__container {
+          width: 300px;
           height: 100%;
-          object-fit: contain;
-        }
-      }
 
-      .titan-info {
-        width: 880px;
+          .titan-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        .titan-info {
+          width: 880px;
+        }
       }
     }
-  }
 
-  .character-container {
-    display: inline;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    width: 1200px;
-    margin: 0 auto;
-
-    .character-data {
+    .character-container {
       display: flex;
-      justify-content: space-between;
-      width: 100%;
-      height: 200px;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
 
-      .character-image__container {
-        width: 300px;
-        height: 100%;
+      .character-data {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 200px;
 
-        .character-image {
-          width: 100%;
+        .character-image__container {
+          width: 300px;
           height: 100%;
-          object-fit: contain;
-        }
-      }
 
-      .character-info {
-        width: 880px;
+          .character-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        .character-info {
+          width: 880px;
+        }
       }
     }
   }
