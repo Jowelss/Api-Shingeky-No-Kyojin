@@ -63,6 +63,7 @@ const addCharactDom = (arrCharact) => {
       description: cloneTemplate.querySelector('.character-description'),
       status: cloneTemplate.querySelector('.character-status'),
       image: cloneTemplate.querySelector('.character-image'),
+      poster: cloneTemplate.querySelector('.character-poster'),
     };
 
     listLabels.name.textContent = dataCharact.name;
@@ -72,6 +73,8 @@ const addCharactDom = (arrCharact) => {
     listLabels.status.textContent = dataCharact.status;
 
     listLabels.image.src = dataCharact.image;
+
+    listLabels.poster.src = dataCharact.poster;
 
     fragment.appendChild(cloneTemplate);
   }
@@ -101,6 +104,7 @@ const addTitanDom = (arrTitan) => {
       description: cloneTemplate.querySelector('.titan-description'),
       height: cloneTemplate.querySelector('.titan-height'),
       image: cloneTemplate.querySelector('.titan-image'),
+      poster: cloneTemplate.querySelector('.titan-poster'),
     };
 
     listLabels.name.textContent = dataTitan.name;
@@ -111,10 +115,14 @@ const addTitanDom = (arrTitan) => {
 
     listLabels.image.src = dataTitan.image;
 
+    listLabels.poster.src = dataTitan.poster;
+
     fragment.appendChild(cloneTemplate);
   }
   titansContainer.appendChild(fragment);
 };
+
+const dataContainer = document.querySelector('.data-container');
 
 buttonTitan.addEventListener('click', (e) => {
   let className = e.target.classList.contains('selectTitan');
@@ -124,6 +132,8 @@ buttonTitan.addEventListener('click', (e) => {
   } else {
     e.target.classList.add('selectTitan');
     buttonCharacter.classList.remove('selectCharact');
+
+    titansContainer.style.order = '0'; // Efecto de cambio de seccion
   }
 });
 
@@ -135,5 +145,7 @@ buttonCharacter.addEventListener('click', (e) => {
   } else {
     buttonTitan.classList.remove('selectTitan');
     e.target.classList.add('selectCharact');
+
+    titansContainer.style.order = '1'; // Efecto de cambio de seccion
   }
 });
