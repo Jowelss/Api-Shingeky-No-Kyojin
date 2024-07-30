@@ -122,8 +122,6 @@ const addTitanDom = (arrTitan) => {
   titansContainer.appendChild(fragment);
 };
 
-const dataContainer = document.querySelector('.data-container');
-
 buttonTitan.addEventListener('click', (e) => {
   let className = e.target.classList.contains('selectTitan');
 
