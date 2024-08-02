@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// :root {}
+
+body {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+
+  .logo-container {
+    width: 230px;
+
+    .logo-image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .navigation-menu {
+    width: 300px;
+    padding-right: 10px;
+    .navigation-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+    }
+  }
+}
+
+.main {
+  // styles buttons
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .button-titan {
+      padding: 10px 30px;
+    }
+
+    .button-character {
+      padding: 10px 20px;
+    }
+  }
+}
