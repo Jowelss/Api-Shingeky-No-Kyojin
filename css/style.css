@@ -33,6 +33,9 @@ body {
   list-style: none;
 }
 
+.main {
+  padding: 0 10px;
+}
 .main .button-container {
   display: flex;
   justify-content: center;
@@ -43,6 +46,31 @@ body {
 }
 .main .button-container .button-character {
   padding: 10px 20px;
+}
+.main .data-titan {
+  display: flex;
+  gap: 10px;
+  height: 200px;
+}
+.main .data-titan .data-image__container {
+  min-width: 220px;
+  height: 200px;
+}
+.main .data-titan .data-image__container .data-image {
+  width: 100%;
+  height: 100%;
+}
+.main .data-titan .data-titan__info {
+  position: relative;
+  padding: 5px;
+}
+.main .data-titan .data-titan__info .data-titan__state-container {
+  margin-bottom: 10px;
+}
+.main .data-titan .data-titan__info .data-titan__button-teaser {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
