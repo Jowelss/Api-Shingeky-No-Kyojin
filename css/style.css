@@ -33,9 +33,6 @@ body {
   list-style: none;
 }
 
-.main {
-  padding: 0 10px;
-}
 .main .button-container {
   display: flex;
   justify-content: center;
@@ -47,27 +44,65 @@ body {
 .main .button-container .button-character {
   padding: 10px 20px;
 }
-.main .data-titan {
+.main .data-container {
+  padding: 0 10px;
+  position: relative;
+}
+.main .data-container .data-titan__container {
+  max-width: 1400px;
+}
+.main .data-container .data-titan__container .data-titan {
   display: flex;
   gap: 10px;
   height: 200px;
 }
-.main .data-titan .data-image__container {
+.main .data-container .data-titan__container .data-titan .data-image__container {
   min-width: 220px;
   height: 200px;
 }
-.main .data-titan .data-image__container .data-image {
+.main .data-container .data-titan__container .data-titan .data-image__container .data-image {
   width: 100%;
   height: 100%;
 }
-.main .data-titan .data-titan__info {
+.main .data-container .data-titan__container .data-titan .data-titan__info {
   position: relative;
   padding: 5px;
 }
-.main .data-titan .data-titan__info .data-titan__state-container {
+.main .data-container .data-titan__container .data-titan .data-titan__info .data-titan__state-container {
   margin-bottom: 10px;
 }
-.main .data-titan .data-titan__info .data-titan__button-teaser {
+.main .data-container .data-titan__container .data-titan .data-titan__info .data-titan__button-teaser {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.main .data-container .data-character__container {
+  max-width: 1400px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+.main .data-container .data-character__container .data-character {
+  display: flex;
+  gap: 10px;
+  height: 200px;
+}
+.main .data-container .data-character__container .data-character .data-image__container {
+  min-width: 220px;
+  height: 200px;
+}
+.main .data-container .data-character__container .data-character .data-image__container .data-image {
+  width: 100%;
+  height: 100%;
+}
+.main .data-container .data-character__container .data-character .data-character__info {
+  position: relative;
+  padding: 5px;
+}
+.main .data-container .data-character__container .data-character .data-character__info .data-character__state-container {
+  margin-bottom: 10px;
+}
+.main .data-container .data-character__container .data-character .data-character__info .data-character__button-teaser {
   position: absolute;
   bottom: 0;
   left: 0;

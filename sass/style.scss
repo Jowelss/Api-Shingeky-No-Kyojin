@@ -39,8 +39,7 @@ body {
 }
 
 .main {
-  padding: 0 10px;
-  // styles buttons
+  // BUTTONS TITAN/CHARACTER
   .button-container {
     display: flex;
     justify-content: center;
@@ -55,42 +54,82 @@ body {
     }
   }
 
-  // style container titans
-  .data-titan {
-    display: flex;
-    gap: 10px;
-    height: 200px;
-    // max-width: 100%;
+  .data-container {
+    padding: 0 10px;
+    position: relative; // Para la propiedad data-character__container
 
-    .data-image__container {
-      min-width: 220px;
-      height: 200px;
+    // TITANS
+    .data-titan__container {
+      max-width: 1400px;
 
-      .data-image {
-        width: 100%;
-        height: 100%;
+      .data-titan {
+        display: flex;
+        gap: 10px;
+        height: 200px;
+
+        .data-image__container {
+          min-width: 220px;
+          height: 200px;
+
+          .data-image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .data-titan__info {
+          position: relative;
+          padding: 5px;
+
+          .data-titan__state-container {
+            margin-bottom: 10px;
+          }
+
+          .data-titan__button-teaser {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+        }
       }
     }
 
-    .data-titan__info {
-      position: relative;
-      padding: 5px;
-      // .data-titan__name {
+    // CHARACTER
+    .data-character__container {
+      max-width: 1400px;
+      position: absolute;
+      top: 0;
+      opacity: 0;
 
-      // }
+      .data-character {
+        display: flex;
+        gap: 10px;
+        height: 200px;
 
-      .data-titan__state-container {
-        margin-bottom: 10px;
-      }
+        .data-image__container {
+          min-width: 220px;
+          height: 200px;
 
-      // .data-titan__description {
+          .data-image {
+            width: 100%;
+            height: 100%;
+          }
+        }
 
-      // }
+        .data-character__info {
+          position: relative;
+          padding: 5px;
 
-      .data-titan__button-teaser {
-        position: absolute;
-        bottom: 0;
-        left: 0;
+          .data-character__state-container {
+            margin-bottom: 10px;
+          }
+
+          .data-character__button-teaser {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+        }
       }
     }
   }
