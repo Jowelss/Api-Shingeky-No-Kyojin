@@ -33,58 +33,55 @@
       </div>
 
       <div class="data-container">
-        <div class="data-titan__container">
+        <div class="data-titan__container"></div>
+
+        <template id="template-titan">
           <section class="data-titan">
             <div class="data-image__container">
-              <img src="/assets/descarga.jpeg" alt="" class="data-image" />
+              <img src="" alt="" class="data-image__titan" />
             </div>
 
             <div class="data-titan__info">
-              <h1 class="data-titan__name">Titan Jowels</h1>
+              <h1 class="data-titan__name"></h1>
 
               <div class="data-titan__state-container">
-                <!-- Icon de estado -->
                 <span class="data-titan__state-icon"></span>
-                <span class="data-titan__state">Alive</span>
+                <span class="data-titan__state"></span>
               </div>
 
-              <p class="data-titan__description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Voluptate enim magnam, sed quae deserunt minima ipsa iste hic
-                quidem nulla exercitationem esse, corrupti culpa repellat
-                facilis voluptas quia eius. Mollitia?
-              </p>
+              <p class="data-titan__description"></p>
 
-              <button class="data-titan__button-teaser">Teaser</button>
+              <button class="data-titan__button-teaser">Video</button>
             </div>
           </section>
-        </div>
+        </template>
 
-        <div class="data-character__container">
+        <div class="data-character__container"></div>
+
+        <template id="template-character">
           <section class="data-character">
             <div class="data-image__container">
-              <img src="/assets/descarga.jpeg" alt="" class="data-image" />
+              <img src="" alt="" class="data-image__character" />
             </div>
 
             <div class="data-character__info">
-              <h2 class="data-character__name">Character</h2>
+              <h2 class="data-character__name"></h2>
 
               <div class="data-character__state-container">
                 <span class="data-character__state-icon"></span>
-                <span class="data-character__state">Alive</span>
+                <span class="data-character__status"></span>
               </div>
 
-              <p class="data-character__description">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Aspernatur id doloremque minus voluptate fugiat. Eos hic in sunt
-                autem velit laborum sequi, maiores eum est doloribus esse!
-                Quasi, quidem assumenda?
-              </p>
+              <p class="data-character__description"></p>
 
-              <button class="data-character__button-teaser">Teaser</button>
+              <button class="data-character__button-teaser">Video</button>
+
+              <section class="modal-character">
+                <video src="" class="video-character" controls></video>
+              </section>
             </div>
           </section>
-        </div>
+        </template>
       </div>
     </main>
     <script src="/js/app.js"></script>
