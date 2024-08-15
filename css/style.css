@@ -50,6 +50,9 @@ body {
 }
 .main .data-container .data-titan__container {
   max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .main .data-container .data-titan__container .data-titan {
   display: flex;
@@ -60,7 +63,7 @@ body {
   min-width: 220px;
   height: 200px;
 }
-.main .data-container .data-titan__container .data-titan .data-image__container .data-image {
+.main .data-container .data-titan__container .data-titan .data-image__container .data-image__titan {
   width: 100%;
   height: 100%;
 }
@@ -81,6 +84,9 @@ body {
   position: absolute;
   top: 0;
   opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .main .data-container .data-character__container .data-character {
   display: flex;
@@ -91,7 +97,7 @@ body {
   min-width: 220px;
   height: 200px;
 }
-.main .data-container .data-character__container .data-character .data-image__container .data-image {
+.main .data-container .data-character__container .data-character .data-image__container .data-image__character {
   width: 100%;
   height: 100%;
 }
@@ -106,6 +112,14 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+.main .data-container .data-character__container .data-character .modal-character {
+  width: 400px;
+  height: 200px;
+}
+.main .data-container .data-character__container .data-character .modal-character .video-character {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
