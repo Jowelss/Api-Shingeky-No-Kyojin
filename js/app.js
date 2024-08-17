@@ -79,6 +79,7 @@ function addTitanDom(titans) {
 
   dataTitan.appendChild(fragment);
 }
+i;
 
 const templateCharacter = document.getElementById('template-character');
 
@@ -107,16 +108,6 @@ function addCharacterDom(character) {
 
   dataCharacter.appendChild(fragment);
 }
-
-const videoButtonTitan = document.querySelector('.data-titan__button-teaser');
-
-const videoContent = document.getElementById('video');
-
-// function playVideoTitan() {
-//   videoContent.src = '';
-// }
-
-// videoButtonTitan.addEventListener('click', playVideoTitan);
 
 function changeTitan() {
   if ((dataTitan.style.opacity = '1')) {
