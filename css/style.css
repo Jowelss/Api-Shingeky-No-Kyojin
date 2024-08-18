@@ -85,6 +85,7 @@ body {
   top: 0;
   opacity: 0;
   display: flex;
+  display: none;
   flex-direction: column;
   gap: 10px;
 }
@@ -113,11 +114,27 @@ body {
   bottom: 0;
   left: 0;
 }
-.main .data-container .data-character__container .data-character .modal-character {
-  width: 400px;
-  height: 200px;
+.main .modal {
+  display: none;
+  width: 600px;
+  height: 400px;
+  background-color: rgb(35, 35, 37);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
-.main .data-container .data-character__container .data-character .modal-character .video-character {
+.main .modal .modal-close {
+  display: block;
+  text-align: end;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+.main .modal .modal-video {
   width: 100%;
   height: 100%;
 }
