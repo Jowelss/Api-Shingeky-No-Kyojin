@@ -74,12 +74,47 @@ function addTitanDom(titans) {
     cloneTemplateTitan.querySelector('.data-titan__description').textContent =
       item.description;
 
+    cloneTemplateTitan.querySelector('.data-titan__button-teaser').id =
+      item.src;
+
     fragment.appendChild(cloneTemplateTitan);
   }
 
   dataTitan.appendChild(fragment);
+
+  const buttonVideoTitan = document.querySelectorAll(
+    '.data-titan__button-teaser'
+  );
+
+  watchVideo(buttonVideoTitan);
 }
-i;
+
+const modal = document.querySelector('.modal');
+
+const modalVideo = document.querySelector('.modal-video');
+
+function watchVideo(video) {
+  video.forEach((item) => {
+    item.addEventListener('click', (e) => {
+      if (e.target.id) {
+        modal.style.display = 'block';
+
+        modalVideo.src = e.target.id;
+      } else {
+        console.log('Nega');
+      }
+    });
+  });
+}
+
+const modalClose = document.querySelector('.modal-close');
+
+modalClose.addEventListener('click', () => {
+  modal.style.display = 'none';
+
+  modalVideo.src = '';
+  console.log(modalVideo);
+});
 
 const templateCharacter = document.getElementById('template-character');
 
@@ -100,8 +135,6 @@ function addCharacterDom(character) {
     cloneTemplateCharacter.querySelector(
       '.data-character__status'
     ).textContent = item.status;
-
-    cloneTemplateCharacter.querySelector('.video-character').src = item.src;
 
     fragment.appendChild(cloneTemplateCharacter);
   }
