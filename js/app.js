@@ -14,6 +14,7 @@ async function getdata() {
     const titans = await getDataTitan(data.titans);
     const characters = await getDataCharacter(data.characters);
 
+    // return data titans and character in fuction getData()
     return {
       titans,
       characters,
@@ -49,6 +50,7 @@ async function getDataCharacter(dataCharacter) {
   }
 }
 
+// Get fuctions promises titans and character
 getdata()
   .then((data) => {
     addTitanDom(data.titans);
@@ -62,6 +64,7 @@ const fragment = document.createDocumentFragment();
 
 const templateTitan = document.getElementById('template-titan');
 
+// fuction add data of titans to DOM
 function addTitanDom(titans) {
   for (const item of titans) {
     let cloneTemplateTitan = templateTitan.content.cloneNode(true);
@@ -91,6 +94,7 @@ function addTitanDom(titans) {
 
 const templateCharacter = document.getElementById('template-character');
 
+// fuction add data of characters to DOM
 function addCharacterDom(character) {
   for (const item of character) {
     let cloneTemplateCharacter = templateCharacter.content.cloneNode(true);
@@ -126,6 +130,7 @@ function addCharacterDom(character) {
 const modalContainer = document.querySelector('.modal-container');
 const modalVideo = document.querySelector('.modal-video');
 
+// fuctions for added videos to modal and open it with button (buttonVideoCharacter and buttonVideoTitan)
 function watchVideoTitan(video) {
   video.forEach((item) => {
     item.addEventListener('click', (e) => {
@@ -154,6 +159,7 @@ function watchVideoCharacter(video) {
   });
 }
 
+// fuction to closed modal when clicking to button
 const modalClose = document.querySelector('.modal-close');
 
 function closeModalbutton() {
@@ -165,15 +171,18 @@ function closeModalbutton() {
 
 modalClose.addEventListener('click', closeModalbutton);
 
+// fuction to closed modal when clicking outside the modal
 function modalCloseOutside(event) {
   if (event === modalContainer) {
     modalContainer.style.display = 'none';
   }
 }
+
 window.addEventListener('click', (e) => {
   modalCloseOutside(e.target);
 });
 
+// two fuctions for change de sections (titans to characters)
 function changeTitan() {
   if ((dataTitan.style.opacity = '1')) {
     console.log('Elemento ya seleccionado');
