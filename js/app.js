@@ -86,35 +86,8 @@ function addTitanDom(titans) {
     '.data-titan__button-teaser'
   );
 
-  watchVideo(buttonVideoTitan);
+  watchVideoTitan(buttonVideoTitan);
 }
-
-const modal = document.querySelector('.modal');
-
-const modalVideo = document.querySelector('.modal-video');
-
-function watchVideo(video) {
-  video.forEach((item) => {
-    item.addEventListener('click', (e) => {
-      if (e.target.id) {
-        modal.style.display = 'block';
-
-        modalVideo.src = e.target.id;
-      } else {
-        console.log('Nega');
-      }
-    });
-  });
-}
-
-const modalClose = document.querySelector('.modal-close');
-
-modalClose.addEventListener('click', () => {
-  modal.style.display = 'none';
-
-  modalVideo.src = '';
-  console.log(modalVideo);
-});
 
 const templateCharacter = document.getElementById('template-character');
 
@@ -136,11 +109,70 @@ function addCharacterDom(character) {
       '.data-character__status'
     ).textContent = item.status;
 
+    cloneTemplateCharacter.querySelector('.data-character__button-teaser').id =
+      item.src;
+
     fragment.appendChild(cloneTemplateCharacter);
   }
 
   dataCharacter.appendChild(fragment);
+
+  const buttonVideoCharacter = document.querySelectorAll(
+    '.data-character__button-teaser'
+  );
+  watchVideoCharacter(buttonVideoCharacter);
 }
+
+const modalContainer = document.querySelector('.modal-container');
+const modalVideo = document.querySelector('.modal-video');
+
+function watchVideoTitan(video) {
+  video.forEach((item) => {
+    item.addEventListener('click', (e) => {
+      if (e.target.id) {
+        modalContainer.style.display = 'block';
+
+        modalVideo.src = e.target.id;
+      } else {
+        console.log('Nega');
+      }
+    });
+  });
+}
+
+function watchVideoCharacter(video) {
+  video.forEach((item) => {
+    item.addEventListener('click', (e) => {
+      if (e.target.id) {
+        modalContainer.style.display = 'block';
+
+        modalVideo.src = e.target.id;
+      } else {
+        console.log('Nega');
+      }
+    });
+  });
+}
+
+const modalClose = document.querySelector('.modal-close');
+
+function closeModalbutton() {
+  modalContainer.style.display = 'none';
+
+  modalVideo.src = '';
+  console.log(modalVideo);
+}
+
+modalClose.addEventListener('click', closeModalbutton);
+
+function modalCloseOutside(event) {
+  if (event === modalContainer) {
+    modalContainer.style.display = 'none';
+  }
+}
+window.addEventListener('click', (e) => {
+  modalCloseOutside(e.target);
+});
 
 function changeTitan() {
   if ((dataTitan.style.opacity = '1')) {
