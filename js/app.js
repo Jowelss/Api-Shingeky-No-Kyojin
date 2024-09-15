@@ -184,24 +184,14 @@ window.addEventListener('click', (e) => {
 
 // two fuctions for change de sections (titans to characters)
 function changeTitan() {
-  if ((dataTitan.style.opacity = '1')) {
-    console.log('Elemento ya seleccionado');
-    dataCharacter.style.opacity = '0';
-  } else {
-    dataTitan.style.opacity = '1';
-
-    dataCharacter.style.opacity = '0';
+  if ((dataCharacter.style.zIndex = '1')) {
+    dataCharacter.style.zIndex = '-1';
   }
 }
 
 function changeCharacter() {
-  if ((dataCharacter.style.opacity = '1')) {
-    console.log('Elemento ya seleccionado');
-    dataTitan.style.opacity = '0';
-  } else {
-    dataCharacter.style.opacity = '1';
-
-    dataTitan.style.opacity = '0';
+  if ((dataCharacter.style.zIndex = '-1')) {
+    dataCharacter.style.zIndex = '1';
   }
 }
 
