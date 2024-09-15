@@ -60,6 +60,7 @@ body {
 
     // TITANS
     .data-titan__container {
+      background-color: #fff;
       max-width: 1400px;
       display: flex;
       flex-direction: column;
@@ -99,14 +100,14 @@ body {
 
     // CHARACTER
     .data-character__container {
+      background-color: #fff;
       max-width: 1400px;
       position: absolute;
       top: 0;
-      opacity: 0;
       display: flex;
-      display: none;
       flex-direction: column;
       gap: 10px;
+      z-index: -1;
 
       .data-character {
         display: flex;
