@@ -125,6 +125,17 @@ function addCharacterDom(character) {
     '.data-character__button-teaser'
   );
   watchVideoCharacter(buttonVideoCharacter);
+  addStateCharacter(dataCharacter); //fuction calling dataCharacter for add status dom
+}
+
+function addStateCharacter() {
+  let stateText = dataCharacter.querySelectorAll('.data-character__status');
+
+  let stateIcon = dataCharacter.querySelectorAll('.data-character__state-icon');
+  // ADD ICON STATE TO DOM
+  stateText.forEach((state) => {
+    let coso = state.textContent;
+  });
 }
 
 const modalContainer = document.querySelector('.modal-container');

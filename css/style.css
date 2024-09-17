@@ -108,7 +108,16 @@ body {
   padding: 5px;
 }
 .main .data-container .data-character__container .data-character .data-character__info .data-character__state-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 10px;
+}
+.main .data-container .data-character__container .data-character .data-character__info .data-character__state-container .data-character__state-icon {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
 }
 .main .data-container .data-character__container .data-character .data-character__info .data-character__button-teaser {
   position: absolute;

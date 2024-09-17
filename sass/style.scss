@@ -129,7 +129,17 @@ body {
           padding: 5px;
 
           .data-character__state-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             margin-bottom: 10px;
+
+            .data-character__state-icon {
+              display: block;
+              width: 10px;
+              height: 10px;
+              border-radius: 100%;
+            }
           }
 
           .data-character__button-teaser {
