@@ -113,6 +113,10 @@ function addCharacterDom(character) {
       '.data-character__status'
     ).textContent = item.status;
 
+    cloneTemplateCharacter
+      //Add status to label status-icon
+      .querySelector('.data-character__status-icon').id = item.status;
+
     cloneTemplateCharacter.querySelector('.data-character__button-teaser').id =
       item.src;
 
@@ -129,12 +133,17 @@ function addCharacterDom(character) {
 }
 
 function addStateCharacter() {
-  let stateText = dataCharacter.querySelectorAll('.data-character__status');
+  const statusIcon = dataCharacter.querySelectorAll(
+    '.data-character__status-icon'
+  );
 
-  let stateIcon = dataCharacter.querySelectorAll('.data-character__state-icon');
-  // ADD ICON STATE TO DOM
-  stateText.forEach((state) => {
-    let coso = state.textContent;
+  statusIcon.forEach((element) => {
+    console.log(element);
+    if (element.id === 'Alive') {
+      element.style.backgroundColor = 'green';
+    } else if (element.id === 'Dead') {
+      element.style.backgroundColor = 'red';
+    }
   });
 }
 
