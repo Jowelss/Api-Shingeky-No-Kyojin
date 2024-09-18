@@ -113,7 +113,7 @@ body {
   gap: 10px;
   margin-bottom: 10px;
 }
-.main .data-container .data-character__container .data-character .data-character__info .data-character__state-container .data-character__state-icon {
+.main .data-container .data-character__container .data-character .data-character__info .data-character__state-container .data-character__status-icon {
   display: block;
   width: 10px;
   height: 10px;
