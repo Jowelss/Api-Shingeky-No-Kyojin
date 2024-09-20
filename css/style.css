@@ -141,11 +141,14 @@ body {
   inset: 0;
 }
 .main .modal-container .modal .modal-close {
-  display: block;
-  text-align: end;
-  font-size: 20px;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  width: 16px;
   color: white;
   cursor: pointer;
+  margin: 5px;
 }
 .main .modal-container .modal .modal-video {
   width: 100%;
