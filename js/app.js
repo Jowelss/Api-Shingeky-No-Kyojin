@@ -159,7 +159,7 @@ function watchVideoTitan(video) {
 
         modalVideo.src = e.target.id;
       } else {
-        console.log('Nega');
+        console.log('');
       }
     });
   });
@@ -206,12 +206,14 @@ window.addEventListener('click', (e) => {
 function changeTitan() {
   if ((dataCharacter.style.zIndex = '1')) {
     dataCharacter.style.zIndex = '-1';
+    dataCharacter.style.display = 'none';
   }
 }
 
 function changeCharacter() {
   if ((dataCharacter.style.zIndex = '-1')) {
     dataCharacter.style.zIndex = '1';
+    dataCharacter.style.display = 'block';
   }
 }
 
