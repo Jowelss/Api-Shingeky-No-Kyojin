@@ -128,6 +128,7 @@ function addCharacterDom(character) {
   const buttonVideoCharacter = document.querySelectorAll(
     '.data-character__button-teaser'
   );
+
   watchVideoCharacter(buttonVideoCharacter);
   addStateCharacter(dataCharacter); //fuction calling dataCharacter for add status dom
 }
@@ -138,11 +139,10 @@ function addStateCharacter() {
   );
 
   statusIcon.forEach((element) => {
-    console.log(element);
     if (element.id === 'Alive') {
-      element.style.backgroundColor = 'green';
+      element.style.backgroundColor = '#1d6e1b';
     } else if (element.id === 'Dead') {
-      element.style.backgroundColor = 'red';
+      element.style.backgroundColor = '#911414';
     }
   });
 }
@@ -156,10 +156,10 @@ function watchVideoTitan(video) {
     item.addEventListener('click', (e) => {
       if (e.target.id) {
         modalContainer.style.display = 'block';
-
+        console.log(e.target.id);
         modalVideo.src = e.target.id;
       } else {
-        console.log('');
+        console.log('Awxo');
       }
     });
   });
@@ -186,7 +186,6 @@ function closeModalbutton() {
   modalContainer.style.display = 'none';
 
   modalVideo.src = '';
-  console.log(modalVideo);
 }
 
 modalClose.addEventListener('click', closeModalbutton);
@@ -207,13 +206,17 @@ function changeTitan() {
   if ((dataCharacter.style.zIndex = '1')) {
     dataCharacter.style.zIndex = '-1';
     dataCharacter.style.display = 'none';
+
+    dataTitan.style.display = 'flex';
   }
 }
 
 function changeCharacter() {
   if ((dataCharacter.style.zIndex = '-1')) {
     dataCharacter.style.zIndex = '1';
-    dataCharacter.style.display = 'block';
+    dataCharacter.style.display = 'flex';
+
+    dataTitan.style.display = 'none';
   }
 }
 
