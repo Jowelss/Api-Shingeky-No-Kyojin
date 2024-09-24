@@ -78,7 +78,8 @@ body {
   }
 
   .data-container {
-    padding: 0 10px;
+    max-width: 1200px; // Para que los contenedores sean mas pequeños en lo ancho, para evitar que sean el mismo tamaño de anchura que el header
+    margin: 0 auto;
     position: relative; // Para la propiedad data-character__container
 
     // TITANS
@@ -87,7 +88,7 @@ body {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      padding: 0 16px;
+      padding: 0 20px;
 
       .data-titan {
         display: flex;
@@ -116,7 +117,7 @@ body {
           }
 
           .data-titan__description {
-            font-weight: 300;
+            font-weight: 100;
           }
 
           .data-titan__status-container {
@@ -129,17 +130,21 @@ body {
     // CHARACTER
     .data-character__container {
       max-width: 1400px;
-      position: absolute;
-      top: 0;
       display: none;
       flex-direction: column;
-      gap: 14px;
+      padding: 0 20px;
+      position: absolute;
+      top: 0;
+      gap: 20px;
       z-index: -1;
 
       .data-character {
         display: flex;
         gap: 10px;
         height: 200px;
+        box-shadow: 0 0 2px 1px #ffffff7a;
+        border-radius: 20px;
+        overflow: hidden;
 
         .data-image__container {
           min-width: 220px;
@@ -154,6 +159,14 @@ body {
         .data-character__info {
           position: relative;
           padding: 5px;
+
+          .data-character__name {
+            font-weight: 900;
+          }
+
+          .data-character__description {
+            font-weight: 100;
+          }
 
           .data-character__status-container {
             display: flex;

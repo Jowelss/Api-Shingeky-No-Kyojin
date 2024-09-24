@@ -61,7 +61,8 @@ body {
   padding: 10px 20px;
 }
 .main .data-container {
-  padding: 0 10px;
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
 }
 .main .data-container .data-titan__container {
@@ -69,7 +70,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 0 16px;
+  padding: 0 20px;
 }
 .main .data-container .data-titan__container .data-titan {
   display: flex;
@@ -95,24 +96,28 @@ body {
   font-weight: 900;
 }
 .main .data-container .data-titan__container .data-titan .data-titan__info .data-titan__description {
-  font-weight: 300;
+  font-weight: 100;
 }
 .main .data-container .data-titan__container .data-titan .data-titan__info .data-titan__status-container {
   margin-bottom: 10px;
 }
 .main .data-container .data-character__container {
   max-width: 1400px;
-  position: absolute;
-  top: 0;
   display: none;
   flex-direction: column;
-  gap: 14px;
+  padding: 0 20px;
+  position: absolute;
+  top: 0;
+  gap: 20px;
   z-index: -1;
 }
 .main .data-container .data-character__container .data-character {
   display: flex;
   gap: 10px;
   height: 200px;
+  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.4784313725);
+  border-radius: 20px;
+  overflow: hidden;
 }
 .main .data-container .data-character__container .data-character .data-image__container {
   min-width: 220px;
@@ -125,6 +130,12 @@ body {
 .main .data-container .data-character__container .data-character .data-character__info {
   position: relative;
   padding: 5px;
+}
+.main .data-container .data-character__container .data-character .data-character__info .data-character__name {
+  font-weight: 900;
+}
+.main .data-container .data-character__container .data-character .data-character__info .data-character__description {
+  font-weight: 100;
 }
 .main .data-container .data-character__container .data-character .data-character__info .data-character__status-container {
   display: flex;
